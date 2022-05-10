@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const mediaHendler = require('./hendler/users');
 
-router.get('/', function (req, res, next) {
-    res.send('user');
-});
+router.post('/register', mediaHendler.register);
 
 module.exports = router;
